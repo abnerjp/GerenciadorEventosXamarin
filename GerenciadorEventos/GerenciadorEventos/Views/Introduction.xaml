@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GerenciadorEventos.Views.Introduction"
+             Title="Início">
+    
+    <ContentPage.Content>
+        <StackLayout 
+            VerticalOptions="FillAndExpand" 
+            BackgroundColor="white">
+
+            <StackLayout 
+                VerticalOptions="FillAndExpand"
+                Padding="16">
+
+                <Label Text="Gerenciador de Eventos"
+                           FontSize="Title"
+                           HorizontalOptions="CenterAndExpand"/>
+
+                <Label Text="Aplicativo para gerenciar eventos e registrar em uma base de dados."
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" 
+                    Padding="50"
+                    HorizontalTextAlignment="Center"/>
+             
+            </StackLayout>
+            <StackLayout 
+                Padding="16"
+                BackgroundColor="WhiteSmoke"
+                VerticalOptions="EndAndExpand">
+                <Label Text="Dev: Abner J Pelisser" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Disciplina: Lab. Engenharia de Software" HorizontalOptions="CenterAndExpand" />
+                <Label Text="Professor: Vanessa dos Anjos Borges" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Fatec - Presidente Prudente" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

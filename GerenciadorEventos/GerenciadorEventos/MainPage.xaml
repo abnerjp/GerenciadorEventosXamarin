@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GerenciadorEventos.MainPage"
+             xmlns:views="clr-namespace:GerenciadorEventos.Views"
+             BackgroundColor="#B20000">
+
+    <Shell.FlyoutHeader>
+        <views:Header />
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Início">
+        <Tab>
+            <ShellContent x:Name="introduction">
+                <views:Introduction />
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Novo evento">
+        <Tab>
+            <ShellContent x:Name="newEvent">
+                <views:Create />
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Todos eventos">
+        <Tab>
+            <ShellContent x:Name="listEvents">
+                <views:List />
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+
+</Shell>

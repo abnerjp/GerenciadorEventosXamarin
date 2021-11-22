@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="GerenciadorEventos.Views.List"
+             Title="Lista de eventos">
+    
+    <ContentPage.Content>
+
+        <StackLayout 
+            Padding="0,16,0,16"
+            BackgroundColor="WhiteSmoke">
+
+            <Label Text="Lista de Eventos" FontSize="Title" HorizontalOptions="Center"/>
+
+            <ListView 
+                ItemsSource="{Binding events}" 
+                x:Name="EventsList"
+                Margin="0,16,0,0"
+                BackgroundColor="White"
+                HasUnevenRows="True"
+                SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Clicked="OnDelete"
+                                          CommandParameter="{Binding .}"
+                                          Text="Remover"/>
+                            </ViewCell.ContextActions>
+
+                            <StackLayout Padding="16">
+
+                                <Label x:Name="EventNameValue" 
+                                    Text="{Binding EventName}"
+                                    FontSize="20"
+                                    TextColor="#B20000"
+                                    FontAttributes="Bold"/>
+
+                                <StackLayout>
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                        <Label Text="Data: " FontAttributes="Bold" VerticalOptions="Center"/>
+                                        <Label x:Name="DateValue" Text="{Binding DateTime}"  VerticalOptions="Center"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Local: " FontAttributes="Bold" VerticalOptions="Center"/>
+                                        <Label x:Name="LocalValue" Text="{Binding Local}" VerticalOptions="Center"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Organização: " FontAttributes="Bold" VerticalOptions="Center"/>
+                                        <Label x:Name="OrganizationValue" Text="{Binding Organization}" VerticalOptions="Center"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Contato: " FontAttributes="Bold" VerticalOptions="Center"/>
+                                        <Label x:Name="ContectValue" Text="{Binding Contact}" VerticalOptions="Center"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Link: " FontAttributes="Bold" VerticalOptions="Center"/>
+                                        <Label x:Name="LinkValue" Text="{Binding Link}" TextColor="Blue" VerticalOptions="Center"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

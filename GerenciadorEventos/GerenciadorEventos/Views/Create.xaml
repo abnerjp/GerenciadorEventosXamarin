@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GerenciadorEventos.Views.Create"
+             Title="Novo Evento">
+
+    <ContentPage.Content>
+        <StackLayout Padding="0,16,0,16" VerticalOptions="Fill" BackgroundColor="WhiteSmoke">
+
+            <Label Text="Dados do Evento" FontSize="Title" HorizontalOptions="Center"/>
+
+            <ScrollView>
+                <StackLayout Padding="16,0,16,0" BackgroundColor="White">
+
+                    <Label Text="Nome do Evento" Padding="4,0,0,0" Margin="0,16,0,0"/>
+                    <Entry x:Name="EventNameValue" />
+                    
+                    <Label Text="Data" Padding="4,0,0,0" Margin="0,16,0,0"/>
+                    <DatePicker 
+                        x:Name="DateValue"
+                        MinimumDate="01/01/2021"
+                        MaximumDate="01/01/2100"
+                        Format="dd/MM/yyyy" />
+                    <Label 
+                        x:Name="DateValueTxt"
+                        Text="{Binding Date, Source={x:Reference DateValue}}" 
+                        Padding="4,0,0,0" 
+                        Margin="0,16,0,0" 
+                        IsVisible="false"/>
+
+                    <Label Text="Hora" Padding="4,0,0,0" Margin="0,16,0,0"/>
+                    <TimePicker x:Name="TimeValue"/>
+                    <Label 
+                        x:Name="TimeValueTxt"
+                        Text="{Binding Time, Source={x:Reference TimeValue}}" 
+                        Padding="4,0,0,0" 
+                        Margin="0,16,0,0" 
+                        IsVisible="false"/>
+
+                    <Label Text="Local" Padding="4,0,0,0" Margin="0,16,0,0"/>
+                    <Entry x:Name="LocalValue" />
+
+                    <Label Text="Organização" Padding="4,0,0,0" Margin="0,16,0,0"/>
+                    <Entry x:Name="OrganizationValue" />
+
+                    <Label Text="Contato" Padding="4,0,0,0" Margin="0,16,0,0"/>
+                    <Entry x:Name="ContactValue" />
+
+                    <Label Text="Link" Padding="4,0,0,0" Margin="0,16,0,0"/>
+                    <Entry x:Name="LinkValue" />
+
+
+                </StackLayout>
+            </ScrollView>
+
+            <Label 
+                x:Name="ErrorsValue" 
+                Text="" 
+                Padding="20,0,16,0" 
+                Margin="0,4,0,4" 
+                TextColor="Red" />
+
+            <Button 
+                Margin="16,0,16,0"
+                Text="Salvar" 
+                HeightRequest="60"
+                Clicked="Button_Clicked"
+                VerticalOptions="EndAndExpand"
+                BackgroundColor="#FFF"
+                BorderColor="#B20000"
+                BorderWidth="2"
+                TextColor="#B20000" />
+
+        </StackLayout>
+
+    </ContentPage.Content>
+    
+</ContentPage>

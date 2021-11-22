@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GerenciadorEventos.Views.Header"
+             BackgroundColor="#b20000">
+    
+    <ContentView.Content>
+        <StackLayout Padding="20" BackgroundColor="#b20000">
+            <Label Text="Suas Opções" FontSize="Medium" TextColor="#FFF" />
+        </StackLayout>
+    </ContentView.Content>
+    
+</ContentView>
